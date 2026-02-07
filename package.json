@@ -1,0 +1,51 @@
+{
+    "name": "mitechprime-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./src/server.js --experimental-modules --no-warnings",
+        "prod": "pm2 start ./src/server.js --node-args='--experimental-modules --no-warnings'",
+        "dev": "nodemon ./src/server.js --experimental-specifier-resolution=node --experimental-modules --no-warnings",
+        "lint:fix": "eslint --fix ./src/*.js",
+        "lint:check": "eslint ./src/*.js",
+        "format:write": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "keywords": [],
+    "author": "mitechprime",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "bull": "^4.12.0",
+        "bullmq": "^5.1.1",
+        "compression": "^1.7.4",
+        "connect-timeout": "^1.9.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-mongo-sanitize": "^2.2.0",
+        "express-rate-limit": "^7.1.5",
+        "helmet": "^7.1.0",
+        "hpp": "^0.2.3",
+        "ioredis": "^5.4.1",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.4.4",
+        "morgan": "^1.10.0",
+        "nanoid": "^5.0.3",
+        "nodemailer": "^6.9.8",
+        "nodemon": "^3.0.1",
+        "resend": "^3.2.0",
+        "socket.io": "^4.7.5",
+        "ts-custom-error": "^3.3.1",
+        "ua-parser-js": "^1.0.38",
+        "validator": "^13.11.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.1.1"
+    }
+}
