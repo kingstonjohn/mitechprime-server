@@ -44,7 +44,7 @@ app.use(compression())
 //Middleware to allow CORS from frontend
 app.use(
     cors({
-        origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://fizohedge.com', 'https://www.fizohedge.com', 'https://backdoor-vault.fizohedge.com', 'https://www.backdoor-vault.fizohedge.com'],
+        origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://mitechprime.com', 'https://www.mitechprime.com', 'https://backdoor-vault.mitechprime.com', 'https://www.backdoor-vault.mitechprime.com'],
         credentials: true,
         optionsSuccessStatus: 200,
     })
@@ -132,7 +132,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
     transports: ['websocket', 'polling'],
     cors: {
-        origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://fizohedge.com', 'https://www.fizohedge.com', 'https://backdoor-vault.fizohedge.com', 'https://www.backdoor-vault.fizohedge.com'],
+        origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://mitechprime.com', 'https://www.mitechprime.com', 'https://backdoor-vault.mitechprime.com', 'https://www.backdoor-vault.mitechprime.com'],
     },
 });
 
